@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KEN BURNS EFFECT without javascript</title>
+	<!--link rel="stylesheet" type="text/css" href="css/main.css"-->
+	<style type="text/css">
+	.center-box
+	{
+		position:absolute;
+  		top: 50%;
+  		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		z-index: 99;
+		text-align: center;
+		font-family: Raleway, sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		background-color: rgba(255,255,255,.75);
+		box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
+		padding: 1em 2em;
+		line-height: 1.5;
+	}
+	small
+	{
+		display: block;
+    	text-transform: lowercase;
+    	font-size: .7em;
+	}
+	@keyframes example 
+	{
+  		0%   
+  		{
+  			background-image: url('two.jpg');
+  			transform: scale(5,6);
+  		}
+	  	25%  
+	  	{
+	  		background-image: url('three.jpg');
+	  		transform: scale(4,5);
+	  	}
+	  	50%  
+	  	{
+	  		background-image: url('two.jpg');
+	  		transform: scale(3,4);
+	  	}
+	  	75% 
+	  	{
+	  		background-image: url('five.jpg');
+	  		transform: scale(2,3);
+	  	}
+	  	100% 
+	  	{
+	  		background-image: url('three.jpg');
+	  		transform: scale(1,2);
+	  	}
+	}
+	div
+	{
+  		/*width: 1520px;
+  		height: 700px;
+  		position: absolute;*/
+  		position: absolute;
+  		width: 99vw;
+  		height: 97vh;
+  		overflow: hidden;
+	}
+	.kls
+	{
+		/*width: 1920px;
+		height: 1080px;*/
+		object-fit: cover;
+  		animation-name: example;
+  		animation-duration: 20s;
+  		transition-delay: 0s;
+  		animation-iteration-count:infinite;
+  		width: 99vw;
+  		height: 97vh;
+  		overflow: hidden;
+	}
+	</style>
+</head>
+<body>
+<div>
+	<div class="kls"></div>
+	<h1 class="center-box">
+		<small>fullscreen</small>
+		<hr>
+		KEN BURNS EFFECT
+		<hr>
+		<small>without javascript</small>
+	</h1>
+</div>
+</body>
+</html>
